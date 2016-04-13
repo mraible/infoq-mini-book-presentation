@@ -1,17 +1,17 @@
 {
-  "name": "presentation-bespoke-emulating-shower",
+  "name": "infoq-mini-book-presentation",
   "version": "1.1.2",
-  "description": "A Bespoke.js presentation that emulates the example presentation for Shower 1.x.",
-  "author": "Dan Allen",
+  "description": "Writing an InfoQ Mini-Book with Asciidoctor",
+  "author": "Matt Raible",
   "contributors": [
     {
-      "name": "Vadim Makeev"
+      "name": "Dan Allen"
     }
   ],
-  "license": "MIT",
+  "license": "Apache 2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/opendevise/bespoke-emulating-shower"
+    "url": "https://github.com/mraible/infoq-mini-book-presentation"
   },
   "dependencies": {},
   "devDependencies": {
