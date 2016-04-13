@@ -1,0 +1,265 @@
+@import "./fonts.css"
+@import "normalizecss/normalize.css"
+
+$transparent = rgba(255,255,255,0) // phantomjs doesn't understand transparent keyword in gradients
+
+*, ::before, ::after { box-sizing: inherit }
+html { box-sizing: border-box }
+
+.deck
+  counter-reset slide
+  font-family "PT Sans", sans-serif
+  font-size 25px
+  line-height 2
+  color #000
+  background-color #000
+  // disable kerning to match original theme
+  //font-feature-settings "kern" 1
+  //text-rendering optimizeLegibility
+  &:not(.bespoke-parent), section:not(.bespoke-slide) { display: none }
+
+.bespoke-parent, .bespoke-scale-parent
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+
+.bespoke-parent
+  overflow hidden // only put overflow on parent, not other slide wrapper elements
+
+.bespoke-scale-parent
+  pointer-events none
+  width 100vw // set width to 100vw to fix scrollbar calculation in Firefox
+
+.bespoke-slide
+  opacity 0 // force opacity to start at 0 to avoid transition on load when using bespoke-scale
+  pointer-events none
+  background-color #fff
+  position absolute
+  width 1024px
+  margin-left -(@width / 2)
+  left 50%
+  height 640px
+  margin-top -(@height / 2)
+  top 50%
+  padding 105px 120px
+
+.bespoke-active
+  pointer-events auto
+  opacity 1
+
+.bespoke-bullet
+  opacity 0
+  pointer-events none
+  &-active
+    opacity 1
+    pointer-events auto
+
+.bespoke-slide
+  h1, h2
+    font-family "PT Sans Narrow", sans-serif
+    font-size 2em
+    line-height 1em
+    color #666
+    margin 0 0 37px 0
+  p, ul, ol
+    margin 0 0 2em 0
+  p, li, figcaption
+    // reset line-height to match 2x font-size; not inheriting properly when using zoom-based scaling; must be em
+    // ...or perhaps value is just shown wrong in the inspector
+    line-height 2em
+    //font-feature-settings "kern" 1
+    //text-rendering optimizeLegibility
+  p.note
+    color #bbb
+  blockquote
+    margin 0
+    font-style italic
+    &::before
+      position absolute
+      margin -16px 0 0 -80px
+      color #ccc
+      font-size 8em
+      line-height 1
+      content "\201c"
+      font-style normal
+  figure
+    margin 0
+  figcaption
+    margin -2em 0 2em 0
+    font-weight bold
+    font-style italic
+  ul, ol
+    padding 0
+    list-style none
+    li
+      text-indent -2em
+      margin-bottom 20px
+      &::before
+        display inline-block
+        width 2em
+        color #fff
+        text-align right
+  ol
+    counter-reset list
+    > li::before
+      counter-increment list
+      content counter(list) ".\00a0"
+  ul > li::before
+    content "\2022\00a0\00a0"
+  ol ol,
+  ol ul,
+  ul ol,
+  ul ul
+    margin 0 0 0 2em
+  a
+    color #4b86c2
+    text-decoration none
+    background linear-gradient(to top, currentColor, currentColor .09em, $transparent .09em, $transparent) repeat-x
+  h2 a
+    background linear-gradient(to top, currentColor, currentColor .11em, $transparent .11em, $transparent) repeat-x
+  pre, code
+    font-family "PT Mono", monospace
+  *:not(pre) > code, mark
+    border-radius 8px
+    padding 3px 8px
+  *:not(pre) > code
+    background-color rgba(0, 0, 0, 0.07)
+  mark
+    background-color #fafaa2
+  pre
+    margin 0 0 2em 0
+    counter-reset code
+    white-space normal
+    line-height 2em
+    &.screen
+      white-space pre
+    code
+      display block
+      white-space pre
+      line-height 2em
+      &::before
+        position absolute
+        margin-left -2em
+        color #bbb
+        counter-increment code
+        content counter(code,decimal-leading-zero) "."
+    mark.comment, span.comment
+      color #999
+      background-color transparent
+      padding 0
+    mark.important, span.important
+      background-color #c00
+      color white
+    span.important
+      border-radius 8px
+      padding 3px 8px
+  table
+    margin 0 0 2em 0
+    width 100%
+    th
+      text-align left
+    th, td
+      background linear-gradient(to top, #bbb, #bbb .055em, $transparent .055em, $transparent) repeat-x
+      line-height 2em
+    p.tableblock
+      line-height inherit
+      margin 0
+  &::after
+    position absolute
+    top 0
+    right 119px
+    padding 1em 0 0 0
+    width 2.5em
+    height 4em
+    color #fff
+    counter-increment slide
+    content counter(slide)
+    text-align center
+    font-size 0.8em
+    background url(../images/ribbon.svg) no-repeat
+    box-sizing content-box
+  &.image, &.shout
+    &::after
+      visibility hidden // hide the ribbon
+  &.image
+    h1, h2, p, a
+      color #fff
+  &.title
+    a
+      color orange
+    h1, p, a
+      text-align center
+    h1
+      margin 30px 0 0 0
+      font-size 2.8em
+    p
+      font-size 0.8em
+      line-height 2em
+      font-style italic
+      margin 300px 0 0 0
+  &.shout
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    padding 0
+    h2
+      font-size 6em
+      text-align center
+      margin-left 120px
+      margin-right 120px
+      &.fit
+        margin 0
+        font-size 4em
+
+.bespoke-overview
+  -ms-overflow-style none // hide visible scrollbar in IE 10+
+  &::-webkit-scrollbar { width: 0 } // hide visible scrollbar in WebKit
+  background #585a5e url(../images/linen-2x.png) 0% 0% / 256px auto
+  .bespoke-slide
+    box-shadow 0 0 120px rgba(0, 0, 0, 0.005), 0 80px 200px rgba(42, 43, 45, 0.6)
+  .bespoke-slide:hover
+    box-shadow 0 0 0 40px rgba(42, 43, 45, 0.3), 0 80px 200px rgba(42, 43, 45, 0.6)
+    border-radius 4px
+  .bespoke-active
+    box-shadow 0 0 0 4px #376da3, 0 0 0 40px #4B86C2, 0 80px 200px rgba(42, 43, 45, 0.6) !important
+    outline none
+    border-radius 4px
+  &-counter
+    .bespoke-slide::after
+      top 100%
+      left 10%
+      width auto
+      height auto
+      color #3c3d40
+      font-weight bold
+      text-shadow 0 2px 2px #8d8e90
+      font-size 1.6em
+      transform scale(2)
+      transform-origin top left
+      background none
+      cursor default
+      visibility visible
+      text-align left
+      counter-increment slide
+      content counter(slide)
+    .bespoke-active::after
+      color #4b86c2
+      text-shadow 0 2px 2px rgba(42, 43, 45, 0.6)
+  //.bespoke-slide, &-to .bespoke-slide, &-from .bespoke-slide
+  //  transition none
+  .bespoke-title
+    padding 275px 300px 0
+    pointer-events auto
+    h1
+      font-family "PT Sans Narrow", sans-serif
+      font-size 6.5em
+      line-height 1em
+      color #3c3d40
+      text-shadow 0 0.02em 0.02em #8d8e90
+      text-align left
+
+.export .bespoke-bullet
+  opacity 1 !important

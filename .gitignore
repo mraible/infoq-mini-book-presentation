@@ -1,0 +1,7 @@
+/.idea
+/.ruby-version
+/Gemfile.lock
+/asciidoctor-bespoke
+/dist/
+/node_modules/
+/rubygems/

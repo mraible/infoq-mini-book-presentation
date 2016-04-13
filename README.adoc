@@ -1,0 +1,46 @@
+= Writing an InfoQ Mini-Book with Asciidoctor
+
+An Asciidoctor-powered presentation that shows you how to write an http://www.infoq.com/minibooks/[InfoQ Mini-Book] with
+http://asciidoctor.org/[Asciidoctor].
+
+== Building the presentation
+
+=== Prerequisites
+
+Ensure you have the following installed on your machine:
+
+. https://www.ruby-lang.org[Ruby] 2.x footnote:[We strongly recommend using http://rvm.io[RVM] to manage Ruby.]
+. http://bundler.io[Bundler]
+
+ $ gem install bundler
+
+. https://nodejs.org[Node.js] footnote:[We strongly recommend using https://github.com/creationix/nvm[nvm] to manage Node.]
+. http://gulpjs.com[Gulp]
+
+ $ npm install -g gulp
+
+=== Setup
+
+Then, install the required dependencies:
+
+ $ bundle && npm install
+
+Now you're all set to build the presentation!
+
+=== Building the static version
+
+You can build a static version of the slides using the following command:
+
+ $ gulp
+
+The files are built into the _dist_ directory.
+You can then view the slides by navigating to _dist/index.html_ in your browser.
+
+=== Launching the preview server
+
+The preview server will monitor files for changes and automatically update the presentation.
+You can launch the preview server using:
+
+ $ gulp serve
+
+Once the server is running, you can view the slides by navigating to \http://localhost:8000 in your browser.
