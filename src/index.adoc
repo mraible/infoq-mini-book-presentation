@@ -47,9 +47,16 @@ image::less.jpg[Less Cost,1024,640,role=cover canvas]
 
 == How to write Asciidoctor
 
+== Developing an InfoQ Mini-Book
+// gradle/grunt commands with your browser
+// http://asciidocfx.com/[AsciidocFX]
+// IntelliJ IDEA, Atom, Sublime Text
+
 == InfoQ Editing Process
 
 == InfoQ Publishing Process
+// PDF/Mobi/EBUB Testing
+// Print Testing with Lulu
 
 == Interested in Writing?
 * Talk to me!
