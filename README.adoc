@@ -3,6 +3,8 @@
 An Asciidoctor-powered presentation that shows you how to write an http://www.infoq.com/minibooks/[InfoQ Mini-Book] with
 http://asciidoctor.org/[Asciidoctor].
 
+If you'd like to create a similar presentation, clone https://github.com/opendevise/bespoke-emulating-shower[Bespoke.js Emulating Shower].
+
 == Building the presentation
 
 === Prerequisites
@@ -44,3 +46,17 @@ You can launch the preview server using:
  $ gulp serve
 
 Once the server is running, you can view the slides by navigating to \http://localhost:8000 in your browser.
+
+=== Deploy static version
+
+You can publish to GitHub pages by running the following command:
+
+  $ gulp deploy
+  
+=== Tips and Tricks
+
+A few tips from https://github.com/mojavelinux[Dan Allen]:
+
+1. If you don't want it the presentation to start in overview, drop the `autostart: true` option from the `overview()` plugin call in `src/scripts/main.js`.
+2. If you want builds to work each time you visit the slide, remove https://github.com/mraible/infoq-mini-book-presentation/blob/master/src/scripts/main.js#L27-L41[this function].
+3. You can export the presentation to PDF using https://github.com/astefanutti/decktape[DeckTape].
