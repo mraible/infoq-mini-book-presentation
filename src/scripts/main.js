@@ -14,7 +14,7 @@ var bespoke = require('bespoke'),
 //if ('webkitAppearance' in document.documentElement.style) {
 //  var style = document.createElement('style');
 //  style.textContent = '.bespoke-scale-parent{transform-origin:50% 0%}\n.bespoke-slide{top:0;margin-top:0}';
-//  document.head.appendChild(style); 
+//  document.head.appendChild(style);
 //}
 
 (window.bespoke = bespoke).deck = bespoke.from('.deck', [
@@ -22,7 +22,7 @@ var bespoke = require('bespoke'),
   nav(),
   fullscreen(),
   scale('transform'), // NOTE zoom-based scaling produces slightly different results than scale transform
-  overview({ margin: 300, autostart: true, title: true, numbers: true }),
+  overview({ margin: 300, title: true, numbers: true }),
   bullets('.build,.build-items>*:not(.build-items)'),
   function(deck) { // NOTE only works with hack to bespoke-bullets to expose bullets array
     deck.on('deactivate', function(e) {
