@@ -12,10 +12,11 @@ and http://asciidoctor.org/[Asciidoctor]
 
 == Writing a book is hard
 [build=items]
-* It’s hard enough coming up with the idea, but writing is hard.
+* It’s easy enough coming up with an idea, but writing is hard
 * It’s easy enough to write it in Word (or Google Docs), _right_?
-* Copying and pasting code and images into Word or Google Docs is easy.
-* As writers, we're often limited by our tools.
+** Copying and pasting code and images into Google Docs is easy
+** Updating them is not
+* As writers, we're often limited by our tools
 * http://ascidoctor.org[Asciidoctor] to the rescue!
 
 == What is Asciidoctor?
