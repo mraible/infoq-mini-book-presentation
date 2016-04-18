@@ -17,10 +17,14 @@
 <section>
 <h2>Writing a book is hard</h2>
 <ul class="build-items">
-<li><span class="primary">It’s hard enough coming up with the idea, but writing is hard.</span></li>
-<li><span class="primary">It’s easy enough to write it in Word (or Google Docs), <em>right</em>?</span></li>
-<li><span class="primary">Copying and pasting code and images into Word or Google Docs is easy.</span></li>
-<li><span class="primary">As writers, we&#8217;re often limited by our tools.</span></li>
+<li><span class="primary">It’s easy enough coming up with an idea, but writing is hard</span></li>
+<li><span class="primary">It’s easy enough to write it in Word (or Google Docs), <em>right</em>?</span>
+<ul>
+<li><span class="primary">Copying and pasting code and images into Google Docs is easy</span></li>
+<li><span class="primary">Updating them is not</span></li>
+</ul>
+</li>
+<li><span class="primary">As writers, we&#8217;re often limited by our tools</span></li>
 <li><span class="primary"><a href="http://ascidoctor.org">Asciidoctor</a> to the rescue!</span></li>
 </ul>
 </section>
@@ -42,180 +46,65 @@
 </section>
 <section>
 <h2>My Asciidoctor Experience</h2>
-<ul>
-<li><span class="primary">End of 2015: Had a goal write a JHipster Mini-Book for <a href="http://infoq.com">InfoQ</a>.</span></li>
+<ul class="build-items">
+<li><span class="primary">End of 2015: Had a goal to write a JHipster Mini-Book for <a href="http://infoq.com">InfoQ</a></span></li>
+<li><span class="primary">Chose Asciidoctor because I wanted it to be like an open source project</span></li>
+<li><span class="primary">Used <a href="https://github.com/asciidoctor/asciidoctor-gradle-examples">asciidoctor-to-all-example</a> as a starting point</span></li>
+<li><span class="primary">Used JIRA Cloud to create tasks, organize sprints and track progress</span></li>
+<li><span class="primary">Used Bitbucket to host the book&#8217;s source control in Git</span></li>
+<li><span class="primary">Used IntelliJ IDEA to write, and <a href="https://www.browsersync.io/">Browsersync</a> to see changes immediately</span></li>
 </ul>
 </section>
 <section>
 <h2>Asciidoctor @ InfoQ</h2>
+<ul class="build-items">
+<li><span class="primary">InfoQ recommended I use Word or Google Docs</span></li>
+<li><span class="primary">Agreed to Asciidoctor, but expect it be most expensive mini-book</span></li>
+<li><span class="primary">Figured it out, with a great team</span></li>
+<li><span class="primary">Extracted template to <a href="https://github.com/mraible/infoq-mini-book">infoq-mini-book</a></span></li>
+<li><span class="primary"><a href="https://twitter.com/mojavelinux">Dan Allen</a> and <a href="http://asciidocfx.com/">AsciidocFX</a> were a big help</span></li>
+</ul>
 </section>
-<section>
-<h2>How to write Asciidoctor</h2>
+<section class="image" style="background-image: url(images/asciidoctor-howto.png); background-size: cover; background-repeat: no-repeat">
+<h2>Writing Asciidoctor</h2>
 </section>
 <section>
 <h2>Developing an InfoQ Mini-Book</h2>
+<ul class="build-items">
+<li><span class="primary"><code>git clone <a href="https://github.com/mraible/infoq-mini-book" class="bare">https://github.com/mraible/infoq-mini-book</a></code></span></li>
+<li><span class="primary">Run <code>gradlew</code> followed by <code>gradlew watch</code></span></li>
+<li><span class="primary">Install <a href="https://nodejs.org/">Node.js</a> and run <code>npm install</code></span></li>
+<li><span class="primary">Run <code>grunt</code></span></li>
+<li><span class="primary">Use IntelliJ IDEA, Atom, Sublime Text or AsciidocFX to edit</span></li>
+</ul>
 </section>
 <section>
 <h2>InfoQ Editing Process</h2>
+<ul class="build-items">
+<li><span class="primary">Share your Git repository with your editor</span></li>
+<li><span class="primary">Editor creates pull requests by section</span></li>
+<li><span class="primary">Add comments and collaborate on changes</span></li>
+<li><span class="primary">Accept pull request and merge</span></li>
+</ul>
 </section>
 <section>
 <h2>InfoQ Publishing Process</h2>
+<ul>
+<li><span class="primary">Install <a href="https://www.amazon.com/gp/feature.html?docId=1000765211">KindleGen</a> for MOBI</span></li>
+<li><span class="primary">Create HTML, PDF, EPUB and MOBI by running <code>build.sh</code></span></li>
+<li><span class="primary"><code>asciidoctor-pdf-extensions.rb</code> customizes PDF output</span></li>
+<li><span class="primary">Recent improvements by <a href="https://twitter.com/mojavelinux">@mojavelinux</a> allow for <a href="https://www.lulu.com/">Lulu</a> printing</span></li>
+</ul>
 </section>
 <section>
 <h2>Interested in Writing?</h2>
 <ul>
-<li><span class="primary">Talk to me!</span></li>
-<li><span class="primary"><a href="http://www.infoq.com/minibook-guidelines">Author Guidelines for InfoQ Mini-books</a></span></li>
+<li><span class="primary">Talk to us! <a href="mailto:matt@raibledesigns.com">matt@raibledesigns.com</a> or <a href="mailto:minibooks@infoq.com">minibooks@infoq.com</a></span></li>
+<li><span class="primary">Review <a href="http://www.infoq.com/minibook-guidelines">Author Guidelines for InfoQ Mini-books</a></span></li>
 <li><span class="primary">You will retain the copyright for any content produced</span></li>
 <li><span class="primary">You grant InfoQ an exclusive right to publish the free online version</span></li>
 <li><span class="primary">InfoQ will remove mini-book if the author requests</span></li>
 </ul>
-<p class="note"><a href="mailto:minibooks@infoq.com">minibooks@infoq.com</a></p>
-</section>
-<section>
-<h2>Questions?</h2>
-</section>
-<section>
-<h2>Shower Key Features</h2>
-<ol>
-<li><span class="primary">Built on HTML, CSS and vanilla JavaScript</span></li>
-<li><span class="primary">All modern browsers are supported</span></li>
-<li><span class="primary">Slide themes are separated from engine</span></li>
-<li><span class="primary">Fully keyboard accessible</span></li>
-<li><span class="primary">Printable to PDF</span></li>
-</ol>
-<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-</section>
-<section>
-<h2>Plain Text on Your Slides</h2>
-<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <em>dolor</em> in reprehenderit in voluptate velit esse cillum <strong>dolore</strong> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-</section>
-<section>
-<h2>All Kinds of Lists</h2>
-<ol>
-<li><span class="primary">Simple lists are marked with bullets</span></li>
-<li><span class="primary">Ordered lists begin with a number</span></li>
-<li><span class="primary">You can even nest lists one inside another</span>
-<ul>
-<li><span class="primary">Or mix their types</span></li>
-<li><span class="primary">But do not go too far</span></li>
-<li><span class="primary">Otherwise audience will be bored</span></li>
-</ul>
-</li>
-<li><span class="primary">Look, seven rows exactly!</span></li>
-</ol>
-</section>
-<section>
-<h2>Serious Citations</h2>
-<figure class="quote">
-<blockquote>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-</blockquote>
-<figcaption>Marcus Tullius Cicero</figcaption>
-</figure>
-</section>
-<section>
-<h2>Code Samples</h2>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-<mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span>
-    &lt;title&gt;Shower&lt;/title&gt;
-    &lt;meta charset="<span class="important">UTF-8</span>"&gt;
-    &lt;link rel="stylesheet" href="screen.css"&gt;
-<mark>&lt;/head&gt;</mark></code></pre>
-</section>
-<section>
-<h2>Even Tables</h2>
-<table class="tableblock frame-bottom grid-rows">
-<colgroup>
-<col>
-<col>
-<col>
-<col></colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Locavore</th>
-<th class="tableblock halign-left valign-top">Umami</th>
-<th class="tableblock halign-left valign-top">Helvetica</th>
-<th class="tableblock halign-left valign-top">Vegan</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="tableblock halign-left valign-top">
-<p class="tableblock">Fingerstache</p>
-</th>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Kale</p>
-</td>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Chips</p>
-</td>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Keytar</p>
-</td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top">
-<p class="tableblock">Sriracha</p>
-</th>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Gluten-free</p>
-</td>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Ennui</p>
-</td>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Keffiyeh</p>
-</td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top">
-<p class="tableblock">Thundercats</p>
-</th>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Jean</p>
-</td>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Shorts</p>
-</td>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Biodiesel</p>
-</td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top">
-<p class="tableblock">Terry</p>
-</th>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Richardson</p>
-</td>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Swag</p>
-</td>
-<td class="tableblock halign-left valign-top">
-<p class="tableblock">Blog</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>It&#8217;s good to have information organized.</p>
-</section>
-<section class="image" style="background-image: url(images/picture.jpg); background-size: cover; background-repeat: no-repeat">
-<h2>Pictures</h2>
-</section>
-<section class="shout">
-<h2>You can even shout this way</h2>
-</section>
-<section>
-<h2>Inner Navigation</h2>
-<ol class="build-items">
-<li><span class="primary">Lets you reveal list items one by one</span></li>
-<li><span class="primary">To keep some key points</span></li>
-<li><span class="primary">In secret from audience</span></li>
-<li><span class="primary">But it will work only once</span></li>
-<li><span class="primary">Nobody wants to see the same joke twice</span></li>
-</ol>
 </section>
 <section class="shout">
 <h2 class="fit"><a href="https://github.com/mraible/infoq-mini-book">Start Writing</a> &rarr; &#160;<span class="image"><img src="images/infoq-logo.png" alt="InfoQ" width="240"></span></h2>
