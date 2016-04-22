@@ -14,6 +14,7 @@ and http://asciidoctor.org/[Asciidoctor]
 [build=items]
 * It’s easy enough coming up with an idea, but writing is hard
 * It’s easy enough to write it in Word (or Google Docs), _right_?
+[build=items]
 ** Copying and pasting code and images into Google Docs is easy
 ** Updating them is not
 * As writers, we're often limited by our tools
@@ -23,6 +24,7 @@ and http://asciidoctor.org/[Asciidoctor]
 image::picture.jpg[Close-up of typewriter on park bench,1024,640,role=cover canvas]
 
 == Asciidoctor
+[build=items]
 * An open source implementation of http://www.methods.co.nz/asciidoc/[AsciiDoc] in Ruby
 * A _fast_ text processor & publishing toolchain for converting AsciiDoc to HTML5, DocBook & more
 * Write in plain text, import your code and images
@@ -69,6 +71,7 @@ image::asciidoctor-howto.png[Asciidoctor Text,1024,641,role=cover canvas]
 * Accept pull request and merge
 
 == InfoQ Publishing Process
+[build=items]
 * Install https://www.amazon.com/gp/feature.html?docId=1000765211[KindleGen] for MOBI
 * Create HTML, PDF, EPUB and MOBI by running `build.sh`
 * `asciidoctor-pdf-extensions.rb` customizes PDF output
