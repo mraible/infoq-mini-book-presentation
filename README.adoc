@@ -3,6 +3,8 @@
 An Asciidoctor-powered presentation that shows you how to write an http://www.infoq.com/minibooks/[InfoQ Mini-Book] with
 http://asciidoctor.org/[Asciidoctor].
 
+http://mraible.github.io/infoq-mini-book-presentation/[Slides] | https://www.youtube.com/watch?v=mVFr3RzBPu8[Presentation on YouTube]
+
 If you'd like to create a similar presentation, clone https://github.com/opendevise/bespoke-emulating-shower[Bespoke.js Emulating Shower].
 
 == Building the presentation
