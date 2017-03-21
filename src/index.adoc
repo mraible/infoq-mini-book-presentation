@@ -28,7 +28,7 @@ image::picture.jpg[Close-up of typewriter on park bench,1024,640,role=cover canv
 * An open source implementation of http://www.methods.co.nz/asciidoc/[AsciiDoc] in Ruby
 * A _fast_ text processor & publishing toolchain for converting AsciiDoc to HTML5, DocBook & more
 * Write in plain text, import your code and images
-* Code review and copy edit using Git and code reviews
+* Code review and copy edit using Git
 * Publish as HTML, PDF, EBUB, MOBI and printed books
 
 == The Best Part?
@@ -38,7 +38,7 @@ image::less.jpg[Less Cost,1024,640,role=cover canvas]
 == My Asciidoctor Experience
 [build=items]
 * End of 2015: Had a goal to write a JHipster Mini-Book for http://infoq.com[InfoQ]
-* Chose Asciidoctor because I wanted it to be like an open source project
+* Chose AsciiDoc because I wanted it to be like an open source project
 * Used https://github.com/asciidoctor/asciidoctor-gradle-examples[asciidoctor-to-all-example] as a starting point
 * Used JIRA Cloud to create tasks, organize sprints and track progress
 * Used Bitbucket to host the book's source control in Git
@@ -47,7 +47,7 @@ image::less.jpg[Less Cost,1024,640,role=cover canvas]
 == Asciidoctor @ InfoQ
 [build=items]
 * InfoQ recommended I use Word or Google Docs
-* Agreed to Asciidoctor, but expect it be most expensive mini-book
+* Agreed to AsciiDoc, but expect it be most expensive mini-book
 * Figured it out, with a great team
 * Extracted template to https://github.com/mraible/infoq-mini-book[infoq-mini-book]
 * https://twitter.com/mojavelinux[Dan Allen] and http://asciidocfx.com/[AsciidocFX] were a big help
@@ -60,7 +60,7 @@ image::asciidoctor-howto.png[Asciidoctor Text,1024,641,role=cover canvas]
 * `git clone https://github.com/mraible/infoq-mini-book`
 * Run `gradlew` followed by `gradlew watch`
 * Install https://nodejs.org/[Node.js] and run `npm install`
-* Run `grunt`
+* Run `gulp`
 * Use IntelliJ IDEA, Atom, Sublime Text or AsciidocFX to edit
 
 == InfoQ Editing Process
@@ -75,7 +75,7 @@ image::asciidoctor-howto.png[Asciidoctor Text,1024,641,role=cover canvas]
 * Install https://www.amazon.com/gp/feature.html?docId=1000765211[KindleGen] for MOBI
 * Create HTML, PDF, EPUB and MOBI by running `build.sh`
 * `asciidoctor-pdf-extensions.rb` customizes PDF output
-* Recent improvements by https://twitter.com/mojavelinux[@mojavelinux] allow for https://www.lulu.com/[Lulu] printing
+* Recent improvements by Dan Allen allow for https://www.lulu.com/[Lulu] printing
 
 == Interested in Writing?
 * Talk to us! mailto:matt@raibledesigns.com[matt@raibledesigns.com] or mailto:minibooks@infoq.com[minibooks@infoq.com]
